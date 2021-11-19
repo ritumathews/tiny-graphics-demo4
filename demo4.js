@@ -41,7 +41,7 @@ export class Demo4 extends Scene {
             texture_demo: new Material(new Texture_Demo(), {
                 color: hex_color("#000000"),  // <-- changed base color to black
                 ambient: 1.0,  // <-- changed ambient to 1
-                texture: new Texture("assets/debug_texture.jpg")
+                texture: new Texture("assets/stars.png")
             }),
         }
 
@@ -101,7 +101,7 @@ export class Demo4 extends Scene {
         this.shapes.box_2.arrays.texture_coord.forEach(
             (v, i, l) => v[0] = v[0] + 0.25
         )
-        this.shapes.box_1.draw(context, program_state, this.box_1_transform, this.materials.texture_demo);
+        this.shapes.box_1.draw(context, program_state, this.box_1_transform, this.materials.texture);
         this.shapes.box_2.draw(context, program_state, this.box_2_transform, this.materials.texture_demo);
     }
 }
